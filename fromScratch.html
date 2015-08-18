@@ -1,0 +1,141 @@
+<head>
+<style>
+
+
+
+.text{
+	margin: auto;
+	padding-top: 22px;
+}
+#music{}
+
+#container{
+	width: 50%;
+	background-color: yellow;
+	margin: 50px auto auto auto;
+}
+
+#title{
+	width: 480px;
+	padding: 10px;
+	margin: auto;
+	border:dashed;
+}
+#audioplayer{
+    width: 60px;
+    height: 60px;
+	border: solid;
+	float:left;
+	margin-right:6px;
+}
+
+#pButton{
+    height:60px; 
+    width: 60px;
+    border: none;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    float:none;
+    outline:none;
+}
+
+#qButton{
+    height:60px; 
+    width: 60px;
+    border: none;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    float:none;
+    outline:none;
+}
+
+.play{background: url('images/play.png') ;}
+.pause{background: url('images/pause.png') ;}
+
+</style>
+
+</head>
+
+<body>
+<!-- HTML -->
+
+
+
+
+<div id="playlist">
+	<audio id="wee" src='audio/Wee.mp3' preload='none'></audio>
+	<audio id="rhythm" src='audio/I_Got_Rhythm.mp3' preload='none'></audio>
+	<audio id="remember" src='audio/Remember.mp3' preload='none'></audio>
+	<audio id="slipped" src='audio/Slipped_Again.mp3' preload='none'></audio>
+	<audio id="doing" src='audio/What_Are_You_Doing.mp3' preload='none'></audio>
+	<audio id="pad_thai" src='audio/Pad_Thai.mp3' preload='none'></audio>
+</div>
+
+
+
+<div id="container">
+<div id="audioplayer">
+    <button id="pButton" class="play" onClick="jizzy()"></button>
+    </div>
+
+<p class="text">"Wee" w/ Hank Jones & Red Mitchell </p>
+</div>
+
+<div id="container">
+<div id="audioplayer">
+    <button id="qButton" class="play" onClick="jazzy()"></button>
+    </div>
+
+<p class="text">"Pad Thai" w/ Steve Coleman </p>
+</div>
+
+
+
+
+<!-- Javascript -->
+
+<script>
+var mysic = document.getElementById('wee');
+var music = document.getElementById('pad_thai');
+
+
+//Play and Pause
+function jazzy() {
+    // start music
+    if (music.paused) {
+        music.play();
+        // remove play, add pause
+        qButton.className = "";
+        qButton.className = "pause";
+    } else { // pause music
+        music.pause();
+        // remove pause, add play
+        qButton.className = "";
+        qButton.className = "play";
+    }
+}
+
+//Play and Pause
+function jizzy() {
+    // start music
+    if (mysic.paused) {
+        mysic.play();
+        // remove play, add pause
+        pButton.className = "";
+        pButton.className = "pause";
+    } else { // pause music
+        mysic.pause();
+        // remove pause, add play
+        pButton.className = "";
+        pButton.className = "play";
+    }
+}
+
+
+
+
+</script>
+
+</body>

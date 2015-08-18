@@ -1,0 +1,89 @@
+<head>
+<style>
+
+
+
+.text{
+	margin: auto;
+	padding-top: 22px;
+}
+#music{}
+
+#container{
+	width: 50%;
+	background-color: yellow;
+	margin: 50px auto auto auto;
+}
+
+#title{
+	width: 480px;
+	padding: 10px;
+	margin: auto;
+	border:dashed;
+}
+#audioplayer{
+    width: 60px;
+    height: 60px;
+	border: solid;
+	float:left;
+	margin-right:6px;
+}
+
+#pButton{
+    height:60px; 
+    width: 60px;
+    border: none;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    float:none;
+    outline:none;
+}
+
+.play{background: url('images/play.png') ;}
+.pause{background: url('images/pause.png') ;}
+
+</style>
+
+</head>
+
+<body>
+<!-- HTML -->
+
+
+
+<div id="container">
+
+<audio id="music" src='audio/Wee.mp3' preload='none'></audio>
+<div id="audioplayer">
+    <button id="pButton" class="play" onClick="jazzy()"></button>
+    </div>
+
+<p class="text">"Wee" w/ Hank Jones & Red Mitchell </p>
+</div>
+<!-- Javascript -->
+
+<script>
+var music = document.getElementById('music');
+
+//Play and Pause
+function jazzy() {
+    // start music
+    if (music.paused) {
+        music.play();
+        // remove play, add pause
+        pButton.className = "";
+        pButton.className = "pause";
+    } else { // pause music
+        music.pause();
+        // remove pause, add play
+        pButton.className = "";
+        pButton.className = "play";
+    }
+}
+
+
+
+</script>
+
+</body>

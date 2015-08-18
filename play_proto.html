@@ -1,0 +1,92 @@
+<head>
+<style>
+#title{
+	width: 480px;
+	padding: 10px;
+	margin: auto;
+	border:dashed;
+}
+#audioplayer{
+    width: 60px;
+    height: 60px;
+	border: solid;
+}
+
+#pButton{
+    height:60px; 
+    width: 60px;
+    border: none;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    float:left;
+    outline:none;
+}
+
+.play{background: url('images/play.png') ;}
+.pause{background: url('images/pause.png') ;}
+
+#timeline{
+    width: 400px;
+    height: 20px;
+    margin-top: 20px;
+    float: left;
+    border-radius: 15px;
+    background: rgba(0,0,0,.3);
+  
+}
+#playhead{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-top: 1px;
+    background: rgba(0, 0, 0,1);
+
+}
+</style>
+
+</head>
+
+<body>
+<!-- HTML -->
+
+<button>I Got Rhythm</button>
+<button>Wee</button>
+<button>Slipped Again</button>
+<button>Pad Thai</button>
+
+<div id="title">
+
+<audio id="music" preload="true">
+  <source src="audio/Wee.mp3">
+    </audio>
+<div id="audioplayer">
+    <button id="pButton" class="play" onclick="play()"></button>
+    
+<!--  <div id="timeline">    
+          <div id="playhead"></div> 
+  </div> -->
+</div>
+<p>"Wee" with Hank Jones and Red Mitchell </p>
+</div>
+
+<script>
+var music = document.getElementById('music');
+ 
+//Play and Pause
+function play() {
+    // start music
+    if (music.paused) {
+        music.play();
+        // remove play, add pause
+        pButton.className = "";
+        pButton.className = "pause";
+    } else { // pause music
+        music.pause();
+        // remove pause, add play
+        pButton.className = "";
+        pButton.className = "play";
+    }
+}
+</script>
+</body>

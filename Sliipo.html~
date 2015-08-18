@@ -1,0 +1,83 @@
+<html>
+<head>
+<style>
+
+	h2 {position:relative;
+		height:10px;
+	}
+
+	.rhythm-changes {
+		color:purple;
+}
+</style>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+     <script> 
+$(document).ready(function(){
+    $(".rhythm-changes").click(function(){
+        $(".rhythm-changes").animate({ 
+            opacity: '0.2',
+        });
+    });
+});
+</script> 
+
+     <script> 
+$(document).ready(function(){
+    $("button").click(function(){
+        $(".rhythm-changes").animate({ 
+            opacity: '1.0',
+        });
+    });
+});
+</script> 
+
+</head>
+<body>
+<button>Full Opacity</button>
+<!-- <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div> -->
+<br>
+<h2 class="rhythm-changes">I Got Rhythm</h2>
+<p>Hampton Hawes</p>
+<audio
+	src='/Users/danielwick/Documents/Audio/Good%20Bites/Sliipo/I_Got_Rhythm.mp3'
+	preload='none'
+	controls
+	loop>
+	
+	<!-- Message to display just in case. -->
+	<p>Your browser does not support the audio element.</p>
+</audio>
+
+<h2 class="F_Blues">Slipped Again (F Blues)</h2>
+<p>Hank Jones</p>
+<audio src='/Users/danielwick/Documents/Audio/Good%20Bites/Sliipo/Slipped_Again.mp3' 
+	preload='none'
+	controls
+	loop>
+</audio>
+
+<h2>Remember</h2>
+<p>Wynton Kelly</p>
+<audio src='/Users/danielwick/Documents/Audio/Good%20Bites/Sliipo/Remember.mp3' preload='none' controls loop>
+</audio>
+
+<h2 class="rhythm-changes">Wee (I Got Rhythm)</h2>
+<p>Hank Jones</p>
+<audio src='/Users/danielwick/Documents/Audio/Good%20Bites/Sliipo/Wee.mp3' preload='none' controls loop>
+</audio>
+<br>
+<h2>What Are You Doing The Rest Of Your Life?</h2>
+<p>Pat Martino</p>
+<audio src='/Users/danielwick/Documents/Audio/Good%20Bites/Sliipo/What_Are_You_Doing.mp3' preload='none' controls loop>
+</audio>
+
+<h2>More Pad Thai</h2>
+<p>Steve Coleman</p>
+<audio controls="controls">
+<source src='/Users/danielwick/Documents/Audio/Good%20Bites/Sliipo/Pad_Thai.mp3' />
+</audio>
+
+<br>
+
+</body>
+</html>
