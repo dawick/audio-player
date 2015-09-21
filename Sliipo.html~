@@ -1,6 +1,16 @@
 <html>
 <head>
+
+<!-- CSS -->
 <style>
+
+    #container {
+        width: 700px;
+        margin: auto;
+    	border: 1px solid rgb(145, 0, 0);
+        border-top: 10px solid purple;
+        padding: 15px;
+    }
 
 	h2 {position:relative;
 		height:10px;
@@ -10,6 +20,9 @@
 		color:purple;
 }
 </style>
+
+<!-- Javascript & JQuery -->
+
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
      <script> 
 $(document).ready(function(){
@@ -32,14 +45,20 @@ $(document).ready(function(){
 </script> 
 
 </head>
+
+<!-- HTML Content -->
+
 <body>
+
+<div id="container">
+
 <button>Full Opacity</button>
 <!-- <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div> -->
 <br>
 <h2 class="rhythm-changes">I Got Rhythm</h2>
 <p>Hampton Hawes</p>
 <audio
-	src='/Users/danielwick/Documents/Audio/Good%20Bites/Sliipo/I_Got_Rhythm.mp3'
+	src='audio/I_Got_Rhythm.mp3'
 	preload='none'
 	controls
 	loop>
@@ -49,8 +68,8 @@ $(document).ready(function(){
 </audio>
 
 <h2 class="F_Blues">Slipped Again (F Blues)</h2>
-<p>Hank Jones</p>
-<audio src='/Users/danielwick/Documents/Audio/Good%20Bites/Sliipo/Slipped_Again.mp3' 
+<p>Tommy Flanagan</p>
+<audio src='audio/Slipped_Again.mp3'
 	preload='none'
 	controls
 	loop>
@@ -58,26 +77,31 @@ $(document).ready(function(){
 
 <h2>Remember</h2>
 <p>Wynton Kelly</p>
-<audio src='/Users/danielwick/Documents/Audio/Good%20Bites/Sliipo/Remember.mp3' preload='none' controls loop>
+<audio id='wee' src='audio/Remember.mp3' preload='none'>
+	<button onClick=play()>Play</button>
 </audio>
+
+<button onClick=wee.pause()>Pause</button>
 
 <h2 class="rhythm-changes">Wee (I Got Rhythm)</h2>
 <p>Hank Jones</p>
-<audio src='/Users/danielwick/Documents/Audio/Good%20Bites/Sliipo/Wee.mp3' preload='none' controls loop>
+<audio src='audio/Wee.mp3' preload='none' controls loop>
 </audio>
 <br>
 <h2>What Are You Doing The Rest Of Your Life?</h2>
 <p>Pat Martino</p>
-<audio src='/Users/danielwick/Documents/Audio/Good%20Bites/Sliipo/What_Are_You_Doing.mp3' preload='none' controls loop>
+<audio src='audio/What_Are_You_Doing.mp3' preload='none' controls loop>
 </audio>
 
 <h2>More Pad Thai</h2>
 <p>Steve Coleman</p>
 <audio controls="controls">
-<source src='/Users/danielwick/Documents/Audio/Good%20Bites/Sliipo/Pad_Thai.mp3' />
+<source src='audio/Pad_Thai.mp3' />
 </audio>
 
 <br>
+
+</div>
 
 </body>
 </html>

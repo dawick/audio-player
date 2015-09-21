@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQfun</title>
+<style>
+.b {
+	    height: 100px;
+	    width: 100px;
+	    background-color: #4ECDC4;
+	    border-radius: 5px;
+        display: inline-block;
+}
+
+#audioplayer {
+	    width: 60px;
+   	 	height: 60px;
+		border: solid;
+		float:left;
+		margin-right:6px;
+}
+#pButton{
+    height:60px; 
+    width: 60px;
+    border: none;
+
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    float:none;
+    outline:none;
+}
+
+.play{background: url('images/play.png') ;}
+.pause{background: url('images/pause.png') ;}
+        </style>
+
+<!-- Javascript & JQuery -->
+
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script>
+
+var music = document.getElementById('music');
+
+$(document).ready(function() {
+    $('.b').click(function() {
+        $(this).fadeOut('slow');
+    });
+    $('button').click(function() {
+
+    		$(this).addClass("pause");
+
+
+    });
+});
+
+</script>
+
+
+
+	</head>
+  <body>
+        <audio id="music" src='audio/Wee.mp3' preload='none'></audio>
+        <div class='b'></div>
+        <div class='b'></div>
+        <div class='b'></div>
+        <div class='b'></div>
+        <div id="audioplayer"><button id="pButton" class="play"></button></div>
+        <div id="audioplayer"><button id="pButton" class="play"></button></div>
+	</body>
+</html>

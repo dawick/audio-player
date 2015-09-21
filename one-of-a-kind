@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<img id="myImage" onclick="changeImage(this)" src="pic_bulboff.gif" width="100" height="180">
+
+<img id="myImage" onclick="changeImage(this)" src="pic_bulboff.gif" width="100" height="180">
+
+<img id="myImage" onclick="changeImage(this)" src="pic_bulboff.gif" width="100" height="180">
+
+<p></p>
+
+<script>
+function changeImage(img) {
+
+    if (img.src.match("bulbon")) {
+        img.src = "pic_bulboff.gif";
+    } else {
+        img.src = "pic_bulbon.gif";
+    }
+}
+</script>
+
+</body>
+</html>

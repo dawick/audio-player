@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>something</title>
+<style>
+
+.audioplayer{
+    width: 60px;
+    height: 60px;
+        border: solid;
+        float:left;
+        margin-right:6px;
+}
+
+
+.player{
+    height:60px;
+    width: 60px;
+    border: none;
+    background-image: url('images/play.png');
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    float:none;
+    outline:none;
+}
+
+.play{background: url('images/play.png') ;}
+
+
+</style>
+</head>
+
+
+
+
+
+
+<body>
+
+<div id="playlist">
+  <audio id="wee" src='audio/Wee.mp3' preload='none'></audio>
+
+</div>
+
+<div class="audioplayer">  
+
+<button class="player" onClick=#></button>
+
+
+</div>
+
+
+<img id="myImage" onclick="changeImage(this)" src="images/play.png" width="60" height="60">
+
+
+
+
+<script>
+function changeImage(img) {
+var music = document.getElementById('wee');
+    if (img.src.match("pause")) {
+        img.src = "images/play.png";
+        music.pause();
+    } else {
+        img.src = "images/pause.png";
+        music.play();
+    }
+}
+</script>
+
+
+
+
+</body>
+
+</html>

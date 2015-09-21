@@ -40,6 +40,16 @@
     outline:none;
 }
 
+#qButton{
+    height:60px; 
+    width: 60px;
+    border: none;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    float:none;
+    outline:none;
+}
 
 .play{background: url('images/play.png') ;}
 .pause{background: url('images/pause.png') ;}
@@ -67,7 +77,7 @@
 
 <div class="container">
 <div class="audioplayer">
-    <button id="pButton" class="play" onClick="jazzy(this)"></button>
+    <button id="pButton" class="play" onClick="jizzy()"></button>
     </div>
 
 <p class="text">"Wee" w/ Hank Jones & Red Mitchell </p>
@@ -75,7 +85,7 @@
 
 <div class="container">
 <div class="audioplayer">
-    <button id="pButton" class="play" onClick="jazzy()"></button>
+    <button id="qButton" class="play" onClick="jazzy()"></button>
     </div>
 
 <p class="text">"Pad Thai" w/ Steve Coleman </p>
@@ -87,7 +97,8 @@
 <!-- Javascript -->
 
 <script>
-var music = document.getElementById('wee');
+var mysic = document.getElementById('wee');
+var music = document.getElementById('pad_thai');
 
 
 //Play and Pause
@@ -96,16 +107,31 @@ function jazzy() {
     if (music.paused) {
         music.play();
         // remove play, add pause
+        qButton.className = "";
+        qButton.className = "pause";
+    } else { // pause music
+        music.pause();
+        // remove pause, add play
+        qButton.className = "";
+        qButton.className = "play";
+    }
+}
+
+//Play and Pause
+function jizzy() {
+    // start music
+    if (mysic.paused) {
+        mysic.play();
+        // remove play, add pause
         pButton.className = "";
         pButton.className = "pause";
     } else { // pause music
-        music.pause();
+        mysic.pause();
         // remove pause, add play
         pButton.className = "";
         pButton.className = "play";
     }
 }
-
 
 
 
